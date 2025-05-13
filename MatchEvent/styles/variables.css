@@ -1,0 +1,9 @@
+:root {
+  --color-background-main: #F5F7FA; /* Fondo principal */
+  --color-text-main: #2E2E2E;       /* Texto principal */
+  --color-primary: #1D3557;         /* Color primario */
+  --color-secondary: #E8B24A;       /* Color secundario/acento */
+  --color-hover: #457B9D;           /* Botones/Enlaces hover */
+  --color-card-background: #FFFFFF; /* Fondo tarjetas/contenedores */
+  --color-border: #DDE1E7;          /* Bordes y separadores */
+}
