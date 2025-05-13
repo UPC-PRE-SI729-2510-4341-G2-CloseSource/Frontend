@@ -1,0 +1,39 @@
+.dialog-container {
+  padding: 20px;
+}
+
+.dialog-content {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+mat-dialog-actions {
+  padding: 16px 0;
+  margin-bottom: 0;
+}
+
+button {
+  margin-left: 8px;
+  background-color: #fff !important;
+  color: #1D3557 !important;
+}
+
+.cancel-button {
+  border: 1px solid #1D3557;
+}
+
+.cancel-button:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.delete-button {
+  color: #fff !important;
+  background-color: #c0392b !important;
+}
+
+.delete-button:hover {
+  background-color: #e74c3c !important;
+  border: none;
+  transition: all 0.2s ease;
+}

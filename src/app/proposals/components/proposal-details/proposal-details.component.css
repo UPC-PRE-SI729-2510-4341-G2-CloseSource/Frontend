@@ -1,0 +1,21 @@
+.title {
+  color: #1D3557;
+}
+
+.step-content {
+  padding: 20px;
+  min-height: 200px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+mat-list-item {
+  margin-bottom: 10px;
+}
+
+mat-stepper {
+  margin-bottom: 20px;
+}

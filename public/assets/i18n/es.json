@@ -1,0 +1,84 @@
+{
+  "filter": {
+    "label": "Filtrar",
+    "placeholder": "Escriba para filtrar..."
+  },
+  "proposal": {
+    "title": "Propuestas enviadas",
+    "id": "ID",
+    "request": "Solicitud Asociada",
+    "service": "Servicio Ofrecido",
+    "price": "Precio Ofertado (S/)",
+    "description": "Descripción",
+    "date": "Fecha de Envío",
+    "status": "Estado",
+    "actions": "Acciones",
+    "edit": "Editar"
+    },
+  "details": {
+    "title": "Detalles de la Propuesta",
+    "proposal": "Propuesta",
+    "service": "Servicio",
+    "request": "Solicitud",
+    "close": "Cerrar",
+    "info": "Información"
+  },
+  "details-proposal": {
+    "info": "Información de la Propuesta",
+    "description": "Descripción",
+    "price": "Precio Ofertado",
+    "date": "Fecha de Envío",
+    "status": "Estado"
+  },
+  "details-service": {
+    "info": "Información del Servicio",
+    "name": "Nombre del Servicio",
+    "description": "Descripción del Servicio",
+    "price": "Precio Base"
+  },
+  "details-request": {
+    "info": "Información de la Solicitud",
+    "title": "Título del Evento",
+    "description": "Descripción del Evento",
+    "location": "Ubicación",
+    "dates": "Fechas"
+  },
+  "button": {
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "no": {
+    "data": {
+      "matching": {
+        "filter": "No hay datos que coincidan con el filtro"
+      }
+    }
+  },
+  "proposals": {
+    "sent": "Has enviado",
+    "accepted": "Propuestas aceptadas"
+  },
+  "nav": {
+    "pending_requests": "Pending Requests",
+    "sent_proposals": "Sent Proposals",
+    "upcoming_events": "Upcoming Events"
+  },
+  "dialog": {
+    "edit": "Editar",
+    "create": "Crear",
+    "proposal": "Propuesta"
+  },
+  "form": {
+    "description": "Descripción",
+    "price": "Precio ofertado (S/)",
+    "request": "Solicitud",
+    "service": "Servicio",
+    "cancel": "Cancelar",
+    "save": "Guardar"
+  },
+  "delete": {
+    "confirm": "Confirmar eliminación",
+    "cancel": "Cancelar",
+    "delete": "Eliminar"
+  }
+}
