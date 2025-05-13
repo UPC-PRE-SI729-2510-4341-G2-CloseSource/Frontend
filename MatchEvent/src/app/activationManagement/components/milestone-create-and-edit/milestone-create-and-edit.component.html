@@ -1,0 +1,38 @@
+<!-- Create and Edit Form -->
+<h4>{{ editMode ? 'Edit Milestone' : 'New Milestone' }}</h4>
+<div class="form-section">
+
+  <form (submit)="onSubmit()" #milestoneForm='ngForm' class="form-row">
+    <mat-form-field>
+      <input matInput placeholder="Milestone ID" name="milestoneId" required [(ngModel)]="milestone.id">
+    </mat-form-field>
+    <mat-form-field id="age-form-field">
+      <input matInput type="number" placeholder="Activation ID" name="activationId" required [(ngModel)]="milestone.activation_id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Title" name="title" required [(ngModel)]="milestone.title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" name="description" required [(ngModel)]="milestone.description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Due Date" name="dueDate" required [(ngModel)]="milestone.due_date">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Completion Date" name="address" required [(ngModel)]="milestone.completion_date">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Status" name="address" required [(ngModel)]="milestone.status">
+    </mat-form-field>
+    <ng-container>
+      @if (editMode === true) {
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      }
+      @else {
+        <button mat-raised-button color="primary">Add</button>
+      }
+    </ng-container>
+  </form>
+
+</div>
