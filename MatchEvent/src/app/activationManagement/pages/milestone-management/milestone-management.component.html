@@ -1,0 +1,64 @@
+<!-- Student catalogue -->
+<div class="table-wrapper">
+  <h3>{{ 'title.milestoneTitle' | translate }}</h3>
+
+  <!--Add/Edit Form-->
+  <app-milestone-create-and-edit (editCanceled)="onCancelEdit()"
+                               (milestoneAdded)="onMilestoneAdded($event)"
+                               (milestoneUpdated)="onMilestoneUpdated($event)"
+                               [editMode] = "isEditMode"
+                               [milestone]="milestoneData"/>
+
+  <!-- Data Table -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"
+         matSort matSortActive="name" matSortDirection="asc">
+
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> {{ 'milestone.milestone_id' | translate }} </th>
+      <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="activation_id">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> {{ 'milestone.activation_id' | translate }} </th>
+      <td *matCellDef="let element" mat-cell>{{ element.activation_id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'milestone.milestoneName' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.title }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'milestone.description' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.description }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="due_date">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'milestone.due_date' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.due_date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="completion_date">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'milestone.completion_date' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.completion_date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'milestone.status' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.status }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell> {{ 'milestone.actions' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>
+        <a (click)="onEditItem(element)" href="javascript:void(0)"><mat-icon>edit</mat-icon></a>
+        <a (click)="onDeleteItem(element)" href="javascript:void(0)"><mat-icon>delete</mat-icon></a>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns:displayedColumns" [ngClass]="{'editable-row': milestoneData.id === row.id }" mat-row></tr>
+  </table>
+  <!-- Paginator child component-->
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>
