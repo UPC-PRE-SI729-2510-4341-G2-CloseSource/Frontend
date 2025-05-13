@@ -1,0 +1,12 @@
+{
+  "ratings": [
+    {
+      "rating_id": 1,
+      "event_id": 1,
+      "issuer_id": 1,
+      "receiver_id": 4,
+      "score": 4.8,
+      "comment": "Servicio y ejecución excelentes. El lanzamiento del producto fue un gran éxito, con gran atención al detalle."
+    }
+  ]
+}
