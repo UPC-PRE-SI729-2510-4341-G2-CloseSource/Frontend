@@ -1,0 +1,27 @@
+{
+  "filter": {
+    "label": "Filtrar",
+    "placeholder": "Digite texto a filtrar"
+  },
+  "title": {
+    "milestoneTitle": "Hitos de Activación"
+  },
+    "milestone": {
+      "milestone_id": "ID",
+      "activation_id": "ID de activación",
+      "milestoneName": "Nombre del hito",
+      "description": "Descripción",
+      "due_date": "Fecha de vencimiento",
+      "completion_date": "Fecha de finalización",
+      "status": "Estado",
+      "actions": "Acciones"
+  },
+  "footer": {
+    "rights": "Derechos de autor © 2025 {{ api }}, Todos los derechos reservados",
+    "intro": "Desarrollado ",
+    "author": "por el Equipo {{ team }}"
+  },
+  "button":{
+    "backToDashboard": "Volver al Dashboard"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "filter": {
+    "label": "Filter",
+    "placeholder": "Enter text to filter"
+  },
+  "title": {
+    "milestoneTitle": "Activation's Milestones"
+  },
+  "milestone": {
+    "milestone_id": "ID",
+    "activation_id": "ActivationID",
+    "milestoneName": "Milestone name",
+    "description": "Description",
+    "due_date": "Due date",
+    "completion_date": "Completion date",
+    "status": "status",
+    "actions": "Actions"
+  },
+  "footer": {
+    "rights": "Copyright © 2025 {{ api }}, All rights reserved",
+    "intro": "Developed ",
+    "author": "by {{ team }} Team"
+  },
+  "button":{
+    "backToDashboard": "Back to Dashboard"
+  }
+}
