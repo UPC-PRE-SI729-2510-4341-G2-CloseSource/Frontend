@@ -1,0 +1,303 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "password": "hashed_password_here",
+      "user_type": "company"
+    },
+    {
+      "user_id": 2,
+      "name": "Maria Rodriguez",
+      "email": "maria.rodriguez@example.com",
+      "password": "hashed_password_here",
+      "user_type": "producer"
+    },
+    {
+      "user_id": 3,
+      "name": "David Johnson",
+      "email": "david.johnson@example.com",
+      "password": "hashed_password_here",
+      "user_type": "company"
+    },
+    {
+      "user_id": 4,
+      "name": "Creative Events",
+      "email": "creative@events.com",
+      "password": "hashed_password_here",
+      "user_type": "producer"
+    }
+  ],
+  "companies": [
+    {
+      "company_id": 1,
+      "user_id": 1,
+      "company_name": "ABC Corporation",
+      "business_name": "ABC Corp Ltd",
+      "tax_id": "12345678901"
+    },
+    {
+      "company_id": 2,
+      "user_id": 3,
+      "company_name": "Tech Innovations",
+      "business_name": "Tech Innovations Inc",
+      "tax_id": "98765432109"
+    }
+  ],
+  "producers": [
+    {
+      "producer_id": 1,
+      "user_id": 2,
+      "commercial_name": "EventMasters",
+      "specialty": "Eventos Corporativos"
+    },
+    {
+      "producer_id": 2,
+      "user_id": 4,
+      "commercial_name": "Creative Events",
+      "specialty": "Lanzamientos de Productos"
+    }
+  ],
+  "activation_requests": [
+    {
+      "request_id": 1,
+      "company_id": 1,
+      "event_title": "Lanzamiento Anual de Producto",
+      "event_description": "Buscamos un productor para nuestro evento anual de lanzamiento de productos que mostrará nuestra nueva línea tecnológica para 2025",
+      "location": "Lima, San Isidro",
+      "start_date": "2025-07-15",
+      "end_date": "2025-07-15",
+      "status": "open",
+      "event_filters": [
+        {
+          "filter_id": 1,
+          "type": "event_type",
+          "filter_name": "product_launch"
+        },
+        {
+          "filter_id": 2,
+          "type": "audience_size",
+          "filter_name": "100-250"
+        }
+      ]
+    },
+    {
+      "request_id": 2,
+      "company_id": 2,
+      "event_title": "Patrocinio de Conferencia Tecnológica",
+      "event_description": "Buscamos productores de eventos para encargarse de la presencia de nuestra empresa en la Lima Tech Conference",
+      "location": "Lima, Miraflores",
+      "start_date": "2025-08-20",
+      "end_date": "2025-08-22",
+      "status": "open",
+      "event_filters": [
+        {
+          "filter_id": 3,
+          "type": "event_type",
+          "filter_name": "conference"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "service_id": 1,
+      "producer_id": 1,
+      "name": "Gestión Completa de Eventos",
+      "description": "Servicios integrales de planificación y ejecución de eventos",
+      "price": 5000
+    },
+    {
+      "service_id": 2,
+      "producer_id": 1,
+      "name": "Activación de Marca",
+      "description": "Servicios personalizados de activación de marca para clientes corporativos",
+      "price": 3500
+    },
+    {
+      "service_id": 3,
+      "producer_id": 2,
+      "name": "Paquete de Lanzamiento de Producto",
+      "description": "Servicio especializado para lanzamientos de productos memorables",
+      "price": 7500
+    }
+  ],
+  "proposals": [
+    {
+      "proposal_id": 1,
+      "request_id": 1,
+      "producer_id": 1,
+      "service_id": 2,
+      "description": "Plan personalizado de activación de marca para su lanzamiento de producto con enfoque especial en el compromiso del público y la cobertura mediática",
+      "offered_price": 4000,
+      "submission_date": "2025-05-15T14:30:00",
+      "proposal_status": "pending"
+    },
+    {
+      "proposal_id": 2,
+      "request_id": 1,
+      "producer_id": 2,
+      "service_id": 3,
+      "description": "Servicio integral de lanzamiento de producto con diseño de escenario, producción audiovisual y materiales de marketing post-evento",
+      "offered_price": 6800,
+      "submission_date": "2025-05-16T09:45:00",
+      "proposal_status": "accepted"
+    }
+  ],
+  "events": [
+    {
+      "event_id": 1,
+      "proposal_id": 2,
+      "start_date": "2025-07-15T18:00:00",
+      "end_date": "2025-07-15T22:00:00",
+      "status": "scheduled",
+      "rating": null
+    }
+  ],
+  "galleries": [
+    {
+      "gallery_id": 1,
+      "event_id": 1,
+      "image_url": "https://example.com/events/1/image1.jpg",
+      "description": "Montaje del escenario para el lanzamiento del producto"
+    },
+    {
+      "gallery_id": 2,
+      "event_id": 1,
+      "image_url": "https://example.com/events/1/image2.jpg",
+      "description": "Área de demostración del producto"
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": 1,
+      "producer_id": 1,
+      "company_id": 1,
+      "start_date": "2025-05-10",
+      "contact_status": true
+    },
+    {
+      "contact_id": 2,
+      "producer_id": 2,
+      "company_id": 1,
+      "start_date": "2025-05-12",
+      "contact_status": true
+    }
+  ],
+  "messages": [
+    {
+      "message_id": 1,
+      "contact_id": 1,
+      "sender_id": 1,
+      "content": "Hola, estoy interesado en sus servicios de activación de marca para el próximo lanzamiento de nuestro producto.",
+      "send_date": "2025-05-10T08:30:00",
+      "is_read": true
+    },
+    {
+      "message_id": 2,
+      "contact_id": 1,
+      "sender_id": 2,
+      "content": "¡Gracias por su interés! Estaré encantado de hablar sobre sus necesidades en detalle. ¿Podría compartir más información sobre el producto y su público objetivo?",
+      "send_date": "2025-05-10T10:15:00",
+      "is_read": true
+    },
+    {
+      "message_id": 3,
+      "contact_id": 2,
+      "sender_id": 1,
+      "content": "Hola, estamos considerando su propuesta para nuestro lanzamiento de producto. ¿Podría proporcionarnos más detalles sobre su experiencia previa con lanzamientos tecnológicos?",
+      "send_date": "2025-05-12T14:20:00",
+      "is_read": true
+    },
+    {
+      "message_id": 4,
+      "contact_id": 2,
+      "sender_id": 4,
+      "content": "¡Por supuesto! Hemos trabajado con varias empresas tecnológicas en el pasado. Le enviaré nuestro portafolio de lanzamientos tecnológicos anteriores de inmediato.",
+      "send_date": "2025-05-12T15:05:00",
+      "is_read": true
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": 1,
+      "contract_id": 1,
+      "amount": 3400,
+      "payment_date": "2025-05-20",
+      "payment_method": "bank_transfer"
+    },
+    {
+      "payment_id": 2,
+      "contract_id": 1,
+      "amount": 3400,
+      "payment_date": "2025-07-16",
+      "payment_method": "credit_card"
+    }
+  ],
+  "contracts": [
+    {
+      "contract_id": 1,
+      "company_id": 1,
+      "producer_id": 2,
+      "event_id": 1,
+      "start_date": "2025-05-18",
+      "end_date": "2025-07-16"
+    }
+  ],
+  "ratings": [
+    {
+      "rating_id": 1,
+      "event_id": 1,
+      "issuer_id": 1,
+      "receiver_id": 4,
+      "score": 4.8,
+      "comment": "Servicio y ejecución excelentes. El lanzamiento del producto fue un gran éxito, con gran atención al detalle."
+    }
+  ],
+  "portfolios": [
+    {
+      "portfolio_id": 1,
+      "producer_id": 1,
+      "portfolio_title": "Soluciones para Eventos Corporativos",
+      "portfolio_description": "Nuestro trabajo con empresas Fortune 500 en los últimos 5 años",
+      "project_location": "Diversas ubicaciones en Perú",
+      "project_date": "2020-01-01"
+    },
+    {
+      "portfolio_id": 2,
+      "producer_id": 2,
+      "portfolio_title": "Lanzamientos de Productos Tecnológicos",
+      "portfolio_description": "Exposición de eventos innovadores de lanzamiento de productos para empresas tecnológicas",
+      "project_location": "Lima, Perú",
+      "project_date": "2023-06-15"
+    }
+  ],
+  "activation_management": [
+    {
+      "activation_id": 1,
+      "event_id": 1,
+      "status": "in_progress"
+    }
+  ],
+  "milestones": [
+    {
+      "id": 1,
+      "activation_id": 1,
+      "title": "Reunión Inicial de Planificación",
+      "description": "Reunión de inicio para definir el alcance y los requisitos del evento",
+      "due_date": "2025-05-25",
+      "completion_date": "2025-05-24",
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "activation_id": 1,
+      "title": "Confirmación de Reserva del Lugar",
+      "description": "Asegurar y confirmar el lugar del evento",
+      "due_date": "2025-06-10",
+      "completion_date": "2025-06-08",
+      "status": "completed"
+    }
+  ]
+}
