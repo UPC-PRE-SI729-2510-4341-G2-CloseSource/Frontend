@@ -1,6 +1,7 @@
+
 {
   "hosting": {
-    "public": "dist/proposal-context/browser",
+    "public": "dist/proposal-context-frontend/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proposal-context": {
+    "proposal-context-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/proposal-context",
+            "outputPath": "dist/proposal-context-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "proposal-context:build:production"
+              "buildTarget": "proposal-context-frontend:build:production"
             },
             "development": {
-              "buildTarget": "proposal-context:build:development"
+              "buildTarget": "proposal-context-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "30ea4664-a755-4737-8cb7-c94b68d02348"
+    "analytics": "db557b7b-2a67-4adf-8a0d-9250a80fba70"
   }
 }

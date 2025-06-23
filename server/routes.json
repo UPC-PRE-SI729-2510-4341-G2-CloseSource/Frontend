@@ -1,9 +1,0 @@
-{
-  "/api/*": "/$1",
-  "/services": "/services",
-  "/services/:id": "/services?service_id=:id",
-  "/activation_requests": "/activation_requests",
-  "/activation_requests/:id": "/activation_requests?request_id=:id",
-  "/proposals": "/proposals",
-  "/proposals/:id": "/proposals?proposal_id=:id"
-}

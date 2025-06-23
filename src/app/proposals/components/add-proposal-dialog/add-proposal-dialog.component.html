@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Nueva Propuesta</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Request ID</mat-label>
+      <input class="request-input" matInput type="number" [(ngModel)]="proposal.requestId" name="requestId">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Producer ID</mat-label>
+      <input matInput type="number" [(ngModel)]="proposal.producerId" name="producerId">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="proposal.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput [(ngModel)]="proposal.description" name="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" [(ngModel)]="proposal.offeredPrice" name="offeredPrice">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+</mat-dialog-actions>
