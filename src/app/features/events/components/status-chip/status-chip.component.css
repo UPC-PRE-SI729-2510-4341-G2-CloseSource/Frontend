@@ -1,0 +1,26 @@
+.mat-mdc-chip {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.mat-mdc-chip.mat-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.mat-mdc-chip.mat-accent {
+  background-color: #ff9800;
+  color: white;
+}
+
+.mat-mdc-chip.mat-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.mat-mdc-chip.mat-warn {
+  background-color: #f44336;
+  color: white;
+}

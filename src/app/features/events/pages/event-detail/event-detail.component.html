@@ -1,0 +1,103 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>Event Details</span>
+  <span class="spacer"></span>
+  <button mat-raised-button 
+          color="accent" 
+          (click)="finishEvent()"
+          [disabled]="!canFinishEvent()"
+          *ngIf="currentEvent">
+    <mat-icon>check_circle</mat-icon>
+    Finish Event
+  </button>
+</mat-toolbar>
+
+<div class="container" *ngIf="event$ | async as event; else loading">
+  <div class="event-header">
+    <mat-card class="info-card">
+      <mat-card-header>
+        <mat-card-title>Event #{{ event.id }}</mat-card-title>
+        <mat-card-subtitle>Proposal ID: {{ event.proposalId }}</mat-card-subtitle>
+        <div class="status-container">
+          <app-status-chip [status]="currentEvent?.status || event.status"></app-status-chip>
+        </div>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="event-details">
+          <div class="detail-row">
+            <mat-icon class="detail-icon">event</mat-icon>
+            <div class="detail-content">
+              <div class="detail-label">Start Date</div>
+              <div class="detail-value">{{ formatDate(event.startDate) }}</div>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <mat-icon class="detail-icon">event_busy</mat-icon>
+            <div class="detail-content">
+              <div class="detail-label">End Date</div>
+              <div class="detail-value">{{ formatDate(event.endDate) }}</div>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <mat-icon class="detail-icon">place</mat-icon>
+            <div class="detail-content">
+              <div class="detail-label">Location</div>
+              <div class="detail-value">{{ event.location }}</div>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <mat-icon class="detail-icon">description</mat-icon>
+            <div class="detail-content">
+              <div class="detail-label">Description</div>
+              <div class="detail-value">{{ event.description }}</div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card class="gallery-card" *ngIf="event.gallery && event.gallery.length > 0">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>photo_library</mat-icon>
+        Event Gallery
+      </mat-card-title>
+      <mat-card-subtitle>{{ event.gallery.length }} images</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div class="gallery-container">
+        <div class="gallery-item" *ngFor="let item of event.gallery">
+          <img [src]="item.imageUrl" [alt]="item.caption" loading="lazy">
+          <div class="gallery-caption">{{ item.caption }}</div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="empty-gallery" *ngIf="!event.gallery || event.gallery.length === 0">
+    <mat-card class="empty-card">
+      <mat-card-content>
+        <div class="empty-content">
+          <mat-icon class="empty-icon">photo_library</mat-icon>
+          <h3>No Gallery Images</h3>
+          <p>This event doesn't have any gallery images yet.</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Loading event details...</p>
+  </div>
+</ng-template>
