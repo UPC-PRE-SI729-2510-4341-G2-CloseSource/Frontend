@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  @if (sidenav.mode === 'over') {
+    <button mat-icon-button (click)="sidenav.toggle()" >
+      @if (sidenav.opened) {
+        <mat-icon>close</mat-icon>
+      } @else {
+        <mat-icon>menu</mat-icon>
+      }
+    </button>
+  }
+  <mat-icon matListItemIcon></mat-icon>
+  <span>MatchEvent</span>
+  <span class="mat-spacer"></span>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav>
+    <mat-nav-list>
+
+      @for(option of options; track option.title) {
+        <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" [routerLink]="option.path">
+          <mat-icon matListItemIcon>{{ option.icon }}</mat-icon>
+          {{ option.title }}
+        </mat-list-item>
+      }
+    </mat-nav-list> | <app-authentication-section/>
+    <span>
+    <app-language-switcher/>
+  </span>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet />
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

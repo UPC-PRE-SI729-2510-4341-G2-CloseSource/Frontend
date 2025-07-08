@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Detalles de la Propuesta</h2>
+<mat-dialog-content>
+  <p><strong>Nombre:</strong> {{ proposal.name }}</p>
+  <p><strong>Precio:</strong> {{ proposal.offeredPrice | currency }}</p>
+  <p><strong>Fecha de Envío:</strong> {{ proposal.submissionDate | date:'short' }}</p>
+  <p><strong>Status:</strong> {{ proposal.proposalStatus }}</p>
+  <p><strong>Request ID:</strong> {{ proposal.requestId }}</p>
+  <p><strong>Producer ID:</strong> {{ proposal.producerId }}</p>
+
+  <h3>Plan de Activación</h3>
+  <p><strong>Objetivo:</strong> {{ proposal.activationPlan?.objective }}</p>
+  <p><strong>Concepto:</strong> {{ proposal.activationPlan?.concept }}</p>
+  <p><strong>Branding:</strong> {{ proposal.activationPlan?.branding }}</p>
+  <p><strong>Activación:</strong> {{ proposal.activationPlan?.activation }}</p>
+  <p><strong>Recursos:</strong> {{ proposal.activationPlan?.resources }}</p>
+  <p><strong>KPI:</strong> {{ proposal.activationPlan?.kpi }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>

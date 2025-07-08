@@ -1,0 +1,45 @@
+<div class="overlay">
+  <mat-card class="audience-form-card" aria-label="Audience Profile Form">
+    <h2>{{ 'request.audience_profile_form.title' | translate }}</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.audience_profile_form.age_range' | translate }}</mat-label>
+      <input matInput [(ngModel)]="profile.ageRange" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.audience_profile_form.gender_target' | translate }}</mat-label>
+      <mat-select [(ngModel)]="profile.genderTarget">
+        <mat-option value="ALL">{{ 'request.audience_profile_form.gender.all' | translate }}</mat-option>
+        <mat-option value="MALE">{{ 'request.audience_profile_form.gender.male' | translate }}</mat-option>
+        <mat-option value="FEMALE">{{ 'request.audience_profile_form.gender.female' | translate }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="interest-section">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.audience_profile_form.new_interest' | translate }}</mat-label>
+        <input matInput [(ngModel)]="newInterest" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="addInterest()">
+        {{ 'request.audience_profile_form.add_interest' | translate }}
+      </button>
+    </div>
+
+    <div class="interest-list">
+      <span *ngFor="let interest of profile.interests; let i = index">
+        {{ interest }}
+        <button mat-button color="warn" (click)="removeInterest(i)">x</button>
+      </span>
+    </div>
+
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" (click)="handleSave()" aria-label="Save">
+        {{ 'request.audience_profile_form.save' | translate }}
+      </button>
+      <button mat-raised-button color="warn" (click)="handleCancel()" aria-label="Cancel">
+        {{ 'request.audience_profile_form.cancel' | translate }}
+      </button>
+    </div>
+  </mat-card>
+</div>

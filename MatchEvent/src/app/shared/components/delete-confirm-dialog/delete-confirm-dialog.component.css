@@ -1,0 +1,8 @@
+mat-dialog-content { font-size: 15px; }
+mat-dialog-actions { margin-top: 1rem; }
+.delete {
+  border: 1px solid #E63946;
+  border-radius: 16px;
+  background-color: #E63946;
+  color: var(--color-white) !important;
+}

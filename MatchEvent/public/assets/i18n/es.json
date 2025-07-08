@@ -1,0 +1,87 @@
+{
+  "home": {
+    "title": "¡Bienvenido a MatchEvent!",
+    "description": "Esta plataforma conecta empresas con productoras para organizar activaciones de marca."
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "message": "La página que buscas no existe."
+  },
+  "request": {
+    "createTitle": "Crear Solicitud de Activación",
+    "createButton": "Crear Solicitud de Activación",
+    "title": "Título",
+    "description": "Descripción",
+    "status": "Estado",
+    "company_id": "ID de la Empresa",
+    "event_date_range": "Rango de Fechas del Evento",
+    "start_date": "Fecha de Inicio",
+    "end_date": "Fecha de Fin",
+    "location": "Ubicación",
+    "address": "Dirección",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "capacity": "Capacidad",
+    "image_url": "URL de Imagen",
+    "audience_profiles": "Perfiles de Audiencia",
+    "age_range": "Rango de Edad",
+    "gender_target": "Género Objetivo",
+    "interests": "Intereses",
+    "materials": "Materiales",
+    "name": "Nombre",
+    "quantity": "Cantidad",
+    "specification": "Especificación",
+    "provided_by_company": "Provisto por la Empresa",
+    "edit": "Editar",
+    "add": "Agregar",
+    "delete": "Eliminar",
+    "view_details": "Ver Detalles",
+    "create_button": "Crear Solicitud de Activación",
+    "actions": {
+      "save": "Guardar",
+      "cancel": "Cancelar"
+    },
+    "location_form": {
+      "title": "Ubicación del Evento",
+      "address": "Dirección",
+      "latitude": "Latitud",
+      "longitude": "Longitud",
+      "capacity": "Capacidad",
+      "image_url": "URL de Imagen"
+    },
+    "material": {
+      "form": {
+        "title": "Agregar Material",
+        "name": "Nombre",
+        "quantity": "Cantidad",
+        "specification": "Especificación",
+        "provided": "Provisto por la Empresa",
+        "save": "Guardar",
+        "cancel": "Cancelar"
+      }
+    },
+    "eventDate": {
+      "form": {
+        "title": "Rango de Fechas del Evento",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha de Fin",
+        "save": "Guardar",
+        "cancel": "Cancelar"
+      }
+    },
+    "audience_profile_form": {
+      "title": "Perfil de Audiencia",
+      "age_range": "Rango de Edad",
+      "gender_target": "Género Objetivo",
+      "gender": {
+        "all": "Todos",
+        "male": "Masculino",
+        "female": "Femenino"
+      },
+      "new_interest": "Nuevo Interés",
+      "add_interest": "Agregar Interés",
+      "save": "Guardar",
+      "cancel": "Cancelar"
+    }
+  }
+}

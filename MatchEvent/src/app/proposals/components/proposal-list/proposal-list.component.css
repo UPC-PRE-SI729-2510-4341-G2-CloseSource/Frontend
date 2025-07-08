@@ -1,0 +1,184 @@
+.title-component {
+  color: var(--color-primary);
+  margin: 2rem;
+}
+
+.statistics-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 100%;
+  max-width: 40%;
+  margin: 0 auto 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .statistics-cards {
+    flex-direction: column;
+  }
+}
+
+
+.stat-card {
+  flex: 1;
+  text-align: center;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+  margin: 0 auto;
+  padding: .5rem;
+  border-radius: 16px;
+  transition: all .2s ease-in;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  scale: 1.05;
+}
+
+.stat-card-content {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+}
+
+.filter-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.proposal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 1rem;
+  border-radius: 16px;
+  justify-content: center;
+}
+
+.proposal-card {
+  width: 320px;
+  border-radius: 16px;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.proposal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+mat-card-title {
+  margin-top: .8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+mat-card-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin: .4rem auto;
+}
+
+/* Colores dinámicos por estado */
+mat-card-subtitle.PENDING {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+mat-card-subtitle.ACCEPTED {
+  background-color: #2A9D8F;
+  color: var(--color-white);
+}
+
+mat-card-subtitle.REJECTED {
+  background-color: #E63946;
+  color: var(--color-white);
+}
+
+mat-card-content {
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+mat-card-content p {
+  margin: 0.5rem 0;
+  color: var(--color-text);
+}
+
+.strong {
+  color: var(--color-primary);
+}
+
+mat-card-actions {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.delete {
+  color: #E63946;
+  transition: all .2s ease-in;
+}
+
+.delete:hover {
+  color: #ba2133;
+  transform: scale(1.1);
+}
+
+.info {
+  color: var(--color-primary);
+  transition: all .2s ease-in;
+}
+
+.info:hover {
+  color: #1d3557;
+  transform: scale(1.1);
+}
+
+.edit {
+  color: var(--color-primary);
+  transition: all .2s ease-in;
+}
+
+.edit:hover {
+  color: #1d3557;
+  transform: scale(1.1);
+}
+
+.add-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-primary);
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+
+.no-results mat-icon {
+  padding: 1rem;
+  color: var(--color-secondary);
+}

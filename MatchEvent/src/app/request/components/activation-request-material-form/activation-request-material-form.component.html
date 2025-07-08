@@ -1,0 +1,33 @@
+<div class="overlay">
+  <mat-card class="form-card" aria-label="Material Requirement Form">
+    <h2>{{ 'request.material.form.title' | translate }}</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.material.form.name' | translate }}</mat-label>
+      <input matInput [(ngModel)]="formData.name" aria-label="Material Name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.material.form.quantity' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="formData.quantity" aria-label="Material Quantity" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.material.form.specification' | translate }}</mat-label>
+      <input matInput [(ngModel)]="formData.specification" aria-label="Material Specification" />
+    </mat-form-field>
+
+    <mat-checkbox [(ngModel)]="formData.providedByCompany" aria-label="Provided by Company">
+      {{ 'request.material.form.provided' | translate }}
+    </mat-checkbox>
+
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" (click)="submitForm()" aria-label="Save">
+        {{ 'request.material.form.save' | translate }}
+      </button>
+      <button mat-raised-button color="warn" (click)="cancelForm()" aria-label="Cancel">
+        {{ 'request.material.form.cancel' | translate }}
+      </button>
+    </div>
+  </mat-card>
+</div>

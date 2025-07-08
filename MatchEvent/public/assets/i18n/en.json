@@ -1,0 +1,87 @@
+{
+  "home": {
+    "title": "Welcome to MatchEvent!",
+    "description": "This platform connects companies with producers to organize brand activations."
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for does not exist."
+  },
+  "request": {
+    "createTitle": "Create Activation Request",
+    "createButton": "Create Activation Request",
+    "title": "Title",
+    "description": "Description",
+    "status": "Status",
+    "company_id": "Company ID",
+    "event_date_range": "Event Date Range",
+    "start_date": "Start Date",
+    "end_date": "End Date",
+    "location": "Location",
+    "address": "Address",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "capacity": "Capacity",
+    "image_url": "Image URL",
+    "audience_profiles": "Audience Profiles",
+    "age_range": "Age Range",
+    "gender_target": "Gender Target",
+    "interests": "Interests",
+    "materials": "Materials",
+    "name": "Name",
+    "quantity": "Quantity",
+    "specification": "Specification",
+    "provided_by_company": "Provided by Company",
+    "edit": "Edit",
+    "add": "Add",
+    "delete": "Delete",
+    "view_details": "View Details",
+    "create_button": "Create Activation Request",
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "location_form": {
+      "title": "Activation Location",
+      "address": "Address",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "capacity": "Capacity",
+      "image_url": "Image URL"
+    },
+    "material": {
+      "form": {
+        "title": "Add Material",
+        "name": "Name",
+        "quantity": "Quantity",
+        "specification": "Specification",
+        "provided": "Provided by Company",
+        "save": "Save",
+        "cancel": "Cancel"
+      }
+    },
+    "eventDate": {
+      "form": {
+        "title": "Event Date Range",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "save": "Save",
+        "cancel": "Cancel"
+      }
+    },
+    "audience_profile_form": {
+      "title": "Audience Profile",
+      "age_range": "Age Range",
+      "gender_target": "Gender Target",
+      "gender": {
+        "all": "All",
+        "male": "Male",
+        "female": "Female"
+      },
+      "new_interest": "New Interest",
+      "add_interest": "Add Interest",
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  }
+}

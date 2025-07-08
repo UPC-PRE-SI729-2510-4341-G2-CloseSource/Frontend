@@ -1,0 +1,40 @@
+/* request/components/activation-request-audience-profile-form/activation-request-audience-profile-form.component.css */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.audience-form-card {
+  width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.interest-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.interest-list span {
+  display: inline-block;
+  margin: 4px;
+  background: #ddd;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}

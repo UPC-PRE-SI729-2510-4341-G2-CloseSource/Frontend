@@ -1,0 +1,41 @@
+<div class="overlay">
+  <mat-card class="location-form-card" aria-label="Location Form">
+    <h2>{{ 'request.location_form.title' | translate }}</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.location_form.address' | translate }}</mat-label>
+        <input matInput formControlName="address" aria-label="Address" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.location_form.latitude' | translate }}</mat-label>
+        <input matInput formControlName="latitude" type="number" aria-label="Latitude" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.location_form.longitude' | translate }}</mat-label>
+        <input matInput formControlName="longitude" type="number" aria-label="Longitude" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.location_form.capacity' | translate }}</mat-label>
+        <input matInput formControlName="capacity" type="number" aria-label="Capacity" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'request.location_form.image_url' | translate }}</mat-label>
+        <input matInput formControlName="imageUrl" aria-label="Image URL" />
+      </mat-form-field>
+
+      <div class="form-buttons">
+        <button mat-raised-button color="primary" type="submit" aria-label="Save">
+          {{ 'request.actions.save' | translate }}
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="onCancel()" aria-label="Cancel">
+          {{ 'request.actions.cancel' | translate }}
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

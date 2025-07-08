@@ -1,0 +1,68 @@
+<h1 class="title-component">Propuestas Enviadas</h1>
+
+
+
+<div class="statistics-cards">
+  <mat-card class="stat-card">
+    <mat-card-title>Total de Propuestas</mat-card-title>
+    <mat-card-content class="stat-card-content">
+      <h2>{{ totalProposals }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="stat-card">
+    <mat-card-title>Propuestas Aprobadas</mat-card-title>
+    <mat-card-content class="stat-card-content">
+      <h2>{{ approvedProposals }}</h2>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="filter-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Filtrar por nombre</mat-label>
+    <input matInput [(ngModel)]="filterName" placeholder="Ej. Decoración" />
+  </mat-form-field>
+</div>
+
+<div *ngIf="filteredProposals.length === 0" class="no-results">
+  <mat-icon class="no-search">search_off</mat-icon>
+  <p>No se encontraron propuestas con ese nombre</p>
+</div>
+
+<div class="proposal-cards">
+  <mat-card *ngFor="let proposal of proposals | filterByName: filterName" class="proposal-card">
+    <mat-card-header>
+      <mat-card-title class="title">{{ proposal.name }}</mat-card-title>
+      <mat-card-subtitle [ngClass]="proposal.proposalStatus">
+        {{ proposal.proposalStatus }}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p><strong>Objetivo:</strong> {{ proposal.activationPlan?.objective }}</p>
+      <p><strong>Concepto:</strong> {{ proposal.activationPlan?.concept }}</p>
+      <p><strong>Precio:</strong> {{ proposal.offeredPrice | currency:'USD' }}</p>
+      <p><strong>Fecha de envío:</strong> {{ proposal.submissionDate | date:'short' }}</p>
+    </mat-card-content>
+
+
+    <div class="actions">
+      <mat-card-actions>
+        <button mat-icon-button color="primary" (click)="onEdit(proposal)">
+          <mat-icon class="edit">edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="onDelete(proposal)">
+          <mat-icon class="delete">delete</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" (click)="openDetails(proposal)">
+          <mat-icon>info</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>
+
+<button mat-fab color="primary" class="add-button" (click)="openAddProposalDialog()">
+  <mat-icon>add</mat-icon>
+</button>

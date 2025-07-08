@@ -1,0 +1,27 @@
+<mat-card class="form-card" aria-label="Create Activation Request Form">
+  <mat-card-title>{{ 'request.createTitle' | translate }}</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ 'request.title' | translate }}</mat-label>
+        <input matInput formControlName="title" aria-label="Title" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ 'request.description' | translate }}</mat-label>
+        <textarea matInput formControlName="description" aria-label="Description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ 'request.status' | translate }}</mat-label>
+        <mat-select formControlName="status" aria-label="Status">
+          <mat-option *ngFor="let s of statuses" [value]="s">{{ s }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" aria-label="Create Request">
+        {{ 'request.createButton' | translate }}
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

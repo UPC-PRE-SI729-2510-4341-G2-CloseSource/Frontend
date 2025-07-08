@@ -1,0 +1,24 @@
+<div class="overlay">
+  <mat-card class="form-card" aria-label="Event Date Form">
+    <h2>{{ 'request.eventDate.form.title' | translate }}</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.eventDate.form.startDate' | translate }}</mat-label>
+      <input matInput type="datetime-local" [(ngModel)]="formData.startDate" aria-label="Start Date" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'request.eventDate.form.endDate' | translate }}</mat-label>
+      <input matInput type="datetime-local" [(ngModel)]="formData.endDate" aria-label="End Date" />
+    </mat-form-field>
+
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" (click)="submitForm()" aria-label="Save">
+        {{ 'request.eventDate.form.save' | translate }}
+      </button>
+      <button mat-raised-button color="warn" (click)="cancelForm()" aria-label="Cancel">
+        {{ 'request.eventDate.form.cancel' | translate }}
+      </button>
+    </div>
+  </mat-card>
+</div>

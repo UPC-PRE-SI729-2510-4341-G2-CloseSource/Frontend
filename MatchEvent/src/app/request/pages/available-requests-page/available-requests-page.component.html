@@ -1,0 +1,24 @@
+<div class="requests-container" aria-label="Available Requests List">
+  <button mat-raised-button color="primary" class="create-button" aria-label="Create Activation Request"
+          [routerLink]="['/requests/create']">
+    {{ 'request.create_button' | translate }}
+  </button>
+
+  <div class="request-cards">
+    <mat-card *ngFor="let request of activationRequests" class="request-card" aria-label="Activation Request Card">
+      <mat-card-title>{{ request.title }}</mat-card-title>
+      <mat-card-subtitle>{{ request.status }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ request.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button aria-label="View Details" [routerLink]="['/requests', request.id]">
+          {{ 'request.view_details' | translate }}
+        </button>
+        <button mat-button color="warn" aria-label="Delete Request" (click)="deleteRequest(request.id!)">
+          {{ 'request.delete' | translate }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
